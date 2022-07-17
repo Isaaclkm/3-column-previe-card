@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+:root{
+	--Bright-orange: hsl(31, 77%, 52%);
+	--Dark-cyan: hsl(184, 100%, 22%);
+	--Very-dark-cyan: hsl(179, 100%, 13%);
+
+	--neutral-transparent-white : hsla(0, 0%, 100%, 0.75);
+ 	--neutral-very-light-gray: hsl(0, 0%, 95%);
+
+	--ff-primary: 'Lexend Deca';
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*Star my css*/
+*{
+	box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--neutral-very-light-gray);
+	font-size: 100%;
+}
+.container{
+    width: 70%;
+    
+    height: 30rem;
+	display: flex;
+	flex-direction: row;
+	border-radius: .35rem;
+	box-sizing: border-box;
+}
+.card{
+
+	height: 100%;
+	width: 33.3%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sedans{
+	background-color: var(--Bright-orange);
+	border-radius: .5rem 0rem 0rem .5rem;
+}
+.suvs{
+	background-color: var(--Dark-cyan);
+}
+.luxury{
+	background-color: var(--Very-dark-cyan);
+	border-radius: 0rem .5rem .5rem 0rem;
+}
+.card-content{
+	
+	width: 90%;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: .7rem;
+	padding: 1.5rem;
+}
+.card-content > img{
+	width: 3rem;
+}
+h1{
+	
+	text-transform: uppercase;
+	font-family: 'Big Shoulders Display';
+	color: var(--neutral-very-light-gray);
+	font-weight: 700;
+	font-size: 2.25em;
+}
+p{
+	
+	font-family: 'Lexend Deca';
+	line-height: 1.5rem;
+	color: var(--neutral-transparent-white);
+}
+button{
+	margin-top: 1.5rem;
+	height: 3em;
+	width: 10em;
+	border-radius: 2rem;
+	font-family: 'Lexend Deca';
+	gap: 1.5rem;
+	border: transparent;
+}
+button:hover{
+	cursor: pointer;
+}
+.sedans  button{
+	color: var(--Bright-orange);
+}
+.sedans  button:hover{
+	color: var(--neutral-transparent-white);
+	background-color: var(--Bright-orange);
+	border: var(--neutral-transparent-white) 1px solid;
+}
+.suvs  button{
+	color: var(--Dark-cyan);
+}
+.suvs  button:hover{
+	color: var(--neutral-transparent-white);
+	background-color: var(--Dark-cyan);
+	border: var(--neutral-transparent-white) 1px solid;
+}
+.luxury  button{
+	color: var(--Very-dark-cyan);
+}
+.luxury  button:hover{
+	color: var(--neutral-transparent-white);
+	background-color: var(--Very-dark-cyan);
+	border: var(--neutral-transparent-white) 1px solid;
+}
+
+@media (max-width: 869px) {
+	body{
+		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		overflow: scroll;
+	}
+	.container{
+		width: 50%;
+		min-width: 30%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		border-radius: .35rem;
+		box-sizing: border-box;
+		justify-content: center;
+		align-items: center;
+	}
+	.card{
+		
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.sedans{
+		border-radius: .5rem .5rem 0rem 0rem;
+	}
+	.luxury{
+		background-color: var(--Very-dark-cyan);
+		border-radius: 0rem 0rem .5rem .5rem;
+	}
+
+  }
